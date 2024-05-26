@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Hello World!</title>
+    <script>
+      // Receive messages from the main process
+      const { ipcRenderer } = require('electron');
+      ipcRenderer.on('message', (event, message) => {
+        console.log(message); // Output the message to the console
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="player" id="player1">
+         <p class="name" id="name1">PLAYER 1</p>
+         <p class="points" id="points1">0</p>
+         <div class="status">CURRENT
+           <p class="current-points0" id="current">0</p>
+         </div>
+        </div>
+        <div class="player" id="player2">
+          <p class="name" id="name2">PLAYER 2</p>
+          <p class="points" id="points2">0</p>
+          <div class="status">CURRENT
+           <p class="current-points1" id="current">0</p>
+          </div>
+        </div>
+        <div class="but-img">
+        <img class="dice"src="dice-5.png">
+        <button class="start"onclick="startAgain()">&#128260 START AGAIN!</button>
+        <button class="roll" onclick="roll()">&#127922 ROLL A DICE!</button>
+        <button class="hold" onclick="hold()">&#8987 HOLD</button>
+       </div>
+      </section>
+    </main>
+        
+    </div>
+ 
+    <script>
+      require('./script.js')
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@300&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Anek Odia', sans-serif;
+    font-weight: 1000;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(198,61,89);
+    background: linear-gradient(165deg, rgba(198,61,89,1) 0%, rgba(164,107,175,1) 100%)
+}
+
+main {
+    height: 35rem;
+    width: 65rem;
+    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.452);
+}
+
+
+section {
+   display: flex;
+   flex-direction: row;
+}
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 35rem;  
+    background-color: rgba(228, 228, 228, 0.178); 
+    transition: 0.5s;
+}
+
+.active-player {
+    background-color: rgba(255, 255, 255, 0.63);
+    
+}
+
+.winner {
+    background-color: rgba(54, 52, 52, 0.959); 
+}
+
+
+.name {
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+    color: rgb(16, 14, 49);
+}
+
+.name-winner {
+    color: white;
+}
+
+.points {
+    font-size: 60px;
+    margin-top: 0px;
+    text-align: center;
+    color: rgb(148, 28, 68);
+}
+
+
+
+.status {
+    height: 120px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgba(201, 35, 98, 0.836);
+    margin-top: 100px;
+    text-align: center;
+    font-size: 24px;
+    padding-top:20px;
+    color: white;
+}
+
+.current-points0 .current-points1 {
+    
+    font-size: 40px;
+}
+
+.but-img {
+    left: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 35rem;
+    
+}
+
+img {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.562);
+    
+    top:5rem;
+    position: absolute;
+    transform: scale(0.4);
+}
+
+button {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.705);
+    filter: blur();
+    height: 40px;
+    width: 140px;
+    position:absolute;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.404);
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(10%);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  }
+button:hover {
+    transform: scale(0.95);
+}
+
+.start {
+    top: 3rem;
+    font-size: 14px;
+}
+
+.roll {
+    top: 23rem;
+    font-size: 14px;
+}
+
+.hold {
+    top: 27rem;
+    font-size: 14px;
+}
+
